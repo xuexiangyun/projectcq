@@ -3,7 +3,7 @@
 这是一个采用QFramework.Toolkit + IOC 完成的游戏
 * * *
 **计划开发**
-- [ ] URP渲染管线
+- [X] URP渲染管线
 - [x] 资源管理Addressable
 - [ ] 采用Unity Input System
 - [ ] 后处理
