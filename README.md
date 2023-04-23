@@ -4,12 +4,14 @@
 * * *
 **计划开发**
 - [X] URP渲染管线
-- [x] 资源管理Addressable
-- [ ] 采用Unity Input System
-- [ ] 后处理
-- [ ] 本地化
-- [ ] 表驱动以及保存数据
+- [x] Addressable
+- [X] Input System
+- [ ] Post-processing
+- [ ] localization
+- [ ] 表驱动
+- [ ] 保存数据
 - [ ] 多端运行
+- [ ] FMOD Audio
 * * *
 **优化计划**
 
