@@ -5,19 +5,31 @@ using QFramework;
 
 namespace GameUI
 {
-	// Generate Id:b3afaf7a-4c0f-4f66-ac41-307a685e242b
+	// Generate Id:3ecd6118-bcad-4ac1-8643-a0b04122c118
 	public partial class MainPanel
 	{
 		public const string Name = "MainPanel";
 		
 		[SerializeField]
-		public UnityEngine.UI.Button Button1;
+		public UnityEngine.UI.Button NewGame;
+		[SerializeField]
+		public UnityEngine.UI.Button ContinueGame;
+		[SerializeField]
+		public UnityEngine.UI.Button Setting;
+		[SerializeField]
+		public UnityEngine.UI.Button About;
+		[SerializeField]
+		public UnityEngine.UI.Button Exit;
 		
 		private MainPanelData mPrivateData = null;
 		
 		protected override void ClearUIComponents()
 		{
-			Button1 = null;
+			NewGame = null;
+			ContinueGame = null;
+			Setting = null;
+			About = null;
+			Exit = null;
 			
 			mData = null;
 		}

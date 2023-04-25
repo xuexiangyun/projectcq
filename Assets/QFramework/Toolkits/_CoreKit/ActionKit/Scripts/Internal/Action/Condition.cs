@@ -22,6 +22,7 @@ namespace QFramework
         public static Condition Allocate(Func<bool> condition)
         {
             var conditionAction = mSimpleObjectPool.Allocate();
+            conditionAction.ActionID = ActionKit.ID_GENERATOR++;
             conditionAction.Deinited = false;
             conditionAction.Reset();
             conditionAction.mCondition = condition;
@@ -31,6 +32,7 @@ namespace QFramework
         public bool Paused { get; set; }
         public bool Deinited { get; set; }
         public ActionStatus Status { get; set; }
+        public ulong ActionID { get; set; }
         public void OnStart()
         {
         }
@@ -62,7 +64,7 @@ namespace QFramework
             Status = ActionStatus.NotStart;
         }
     }
-    
+
     public static class ConditionExtension
     {
         public static ISequence Condition(this ISequence self, Func<bool> condition)

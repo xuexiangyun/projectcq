@@ -21,6 +21,14 @@ MonoBehaviour:
     m_Address: MainPanel
     m_ReadOnly: 0
     m_SerializedLabels: []
+  - m_GUID: ada957f5bbd77b644a350fbd8df86460
+    m_Address: FadeCanvas
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+  - m_GUID: b068bb118fcfe0348b7e6f6f78c81b88
+    m_Address: SettingPanel
+    m_ReadOnly: 0
+    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 9242f91edefe7264aa34b16360600de8, type: 2}
   m_SchemaSet:

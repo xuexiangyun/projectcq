@@ -30,6 +30,7 @@ namespace QFramework
         public static Delay Allocate(float delayTime, System.Action onDelayFinish = null)
         {
             var retNode = mPool.Allocate();
+            retNode.ActionID = ActionKit.ID_GENERATOR++;
             retNode.Deinited = false;
             retNode.Reset();
             retNode.DelayTime = delayTime;
@@ -51,6 +52,8 @@ namespace QFramework
         
 
         public ActionStatus Status { get; set; }
+
+        public ulong ActionID { get; set; }
 
         public void OnStart()
         {

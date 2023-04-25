@@ -28,6 +28,7 @@ namespace QFramework
         public static Lerp Allocate(float a, float b, float duration, Action<float> onLerp = null,Action onLerpFinish = null)
         {
             var retNode = mPool.Allocate();
+            retNode.ActionID = ActionKit.ID_GENERATOR++;
             retNode.Deinited = false;
             retNode.Reset();
             retNode.A = a;
@@ -37,7 +38,9 @@ namespace QFramework
             retNode.OnLerpFinish = onLerpFinish;
             return retNode;
         }
-        
+
+        public ulong ActionID { get; set; }
+
         public bool Paused { get; set; }
         public void Reset()
         {

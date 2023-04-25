@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c039ac1cfd2e02d42aa0b5b1de993bde, type: 3}
+  m_Name: ExcelExample
+  m_EditorClassIdentifier: 
+  _StudentItems:
+  - _Id: 19911301
+    _Name: Li Lei
+    _Nationality: CHN
+    _Grade: 1
+    _Class_level: 3
+    _Birthday: 1978-01-01
+    _Favourite_numbers: 05000000
+    _Hobbies:
+    - hiking
+  - _Id: 19911302
+    _Name: Han Meimei
+    _Nationality: CHN
+    _Grade: 1
+    _Class_level: 3
+    _Birthday: 1979-02-14
+    _Favourite_numbers: 17000000
+    _Hobbies:
+    - drawing
+  - _Id: 19911303
+    _Name: Jim Green
+    _Nationality: UK
+    _Grade: 1
+    _Class_level: 3
+    _Birthday: 1978-03-12
+    _Favourite_numbers: 030000000c000000
+    _Hobbies:
+    - football
+  - _Id: 19911304
+    _Name: Kate Green
+    _Nationality: UK
+    _Grade: 1
+    _Class_level: 3
+    _Birthday: 1980-05-01
+    _Favourite_numbers: 010000000300000005000000
+    _Hobbies:
+    - reading
+    - photographing
+  - _Id: 19911305
+    _Name: Lucy King
+    _Nationality: USA
+    _Grade: 1
+    _Class_level: 3
+    _Birthday: 1979-06-01
+    _Favourite_numbers: 07000000
+    _Hobbies:
+    - piano
+  - _Id: 19911306
+    _Name: Lily King
+    _Nationality: USA
+    _Grade: 1
+    _Class_level: 3
+    _Birthday: 1979-06-01
+    _Favourite_numbers: 09000000
+    _Hobbies:
+    - violin
+  - _Id: 19911307
+    _Name: Lin Tao
+    _Nationality: CHN
+    _Grade: 1
+    _Class_level: 3
+    _Birthday: 1979-07-23
+    _Favourite_numbers: 0f000000
+    _Hobbies:
+    - violin
+  - _Id: 19911308
+    _Name: Ann Read
+    _Nationality: CAN
+    _Grade: 1
+    _Class_level: 3
+    _Birthday: 1978-08-08
+    _Favourite_numbers: 08000000
+    _Hobbies:
+    - running
+    - swimming
+  - _Id: 19911309
+    _Name: Wei Hua
+    _Nationality: CHN
+    _Grade: 1
+    _Class_level: 3
+    _Birthday: 1979-09-10
+    _Favourite_numbers: 0100000002000000030000000500000007000000
+    _Hobbies:
+    - table tennis
+  - _Id: 19911310
+    _Name: Lin Feng
+    _Nationality: CHN
+    _Grade: 1
+    _Class_level: 3
+    _Birthday: 1978-12-15
+    _Favourite_numbers: 0000000002000000040000000600000008000000
+    _Hobbies:
+    - studying

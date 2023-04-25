@@ -17,18 +17,41 @@ namespace GameUI
 		
 		protected override void OnOpen(IUIData uiData = null)
 		{
-		}
-		
-		protected override void OnShow()
-		{
-		}
-		
-		protected override void OnHide()
-		{
-		}
-		
+			NewGame.onClick.AddListener(OnClickStarGame);
+			ContinueGame.onClick.AddListener(OnClickStarGame);
+			Setting.onClick.AddListener(OnClickSetting);
+			About.onClick.AddListener(OnClickAbout);
+			Exit.onClick.AddListener(OnClickExitGame);
+        }
+	
+
 		protected override void OnClose()
 		{
+			NewGame.onClick.RemoveAllListeners();
+			ContinueGame.onClick.RemoveAllListeners();
+			Setting.onClick.RemoveAllListeners();
+			About.onClick.RemoveAllListeners();
+			Exit.onClick.RemoveAllListeners();
+        }
+
+		private void OnClickStarGame()
+		{
+
+		}
+
+		private void OnClickSetting()
+		{
+
+		}
+
+		private void OnClickAbout()
+		{
+
+		}
+
+		private void OnClickExitGame()
+		{
+
 		}
 	}
 }

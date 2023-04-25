@@ -39,6 +39,7 @@ namespace QFramework
         public static Custom<TData> Allocate()
         {
             var custom = mSimpleObjectPool.Allocate();
+            custom.ActionID = ActionKit.ID_GENERATOR++;
             custom.Deinited = false;
             custom.Reset();
             return custom;
@@ -67,6 +68,7 @@ namespace QFramework
 
         public bool Deinited { get; set; }
         public ActionStatus Status { get; set; }
+        public ulong ActionID { get; set; }
 
         public void OnStart()
         {
