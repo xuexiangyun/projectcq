@@ -24,10 +24,10 @@ public class GameApp : Singleton<GameApp>
         return ModelIoc.Get<T>();
     }
 
-    public void RegisterModel<T>(T instance) where T:IData
+    public void RegisterModel<T>(T instance) where T:IModel
     {
         ModelIoc.Register<T>(instance);
-        instance.Initialization();
+        instance.Init();
     }
 
     public T GetManage<T>() where T : class
@@ -35,9 +35,9 @@ public class GameApp : Singleton<GameApp>
         return ManageIoc.Get<T>();
     }
 
-    public void RegisterManage<T>(T instance) where T:IManage
+    public void RegisterManage<T>(T instance) where T:IManager
     {
         ManageIoc.Register<T>(instance);
-        instance.Initialization();
+        instance.Init();
     }
 }

@@ -33,8 +33,6 @@ namespace QFramework
     /// </summary>
     public abstract class QMgrBehaviour : QMonoBehaviour, IManager
     {
-        private readonly Lazy<EnumEventSystem> mEventSystem =
-            new Lazy<EnumEventSystem>(ObjectFactory.CreateNonPublicConstructorObject<EnumEventSystem>);
 
         #region IManager
 
@@ -51,16 +49,6 @@ namespace QFramework
             get { return this; }
         }
 
-        public void RegisterEvent<T>(T msgId, Action<object[]> process) where T : IConvertible
-        {
-            mEventSystem.Value.Register(msgId, process);
-        }
-
-        public void UnRegisterEvent<T>(T msgEvent, Action<object[]> process) where T : IConvertible
-        {
-            mEventSystem.Value.UnRegister(msgEvent, process);
-        }
-
         public override void SendMsg(IMsg msg)
         {
             if (msg.ManagerID == ManagerId)
@@ -73,24 +61,5 @@ namespace QFramework
             }
         }
 
-        public override void SendEvent<T>(T eventId)
-        {
-            SendMsg(QMsg.Allocate(eventId));
-        }
-
-
-        // 来了消息以后,通知整个消息链
-        protected override void ProcessMsg(int eventId, QMsg msg)
-        {
-            mEventSystem.Value.Send(msg.EventID, msg);
-        }
-
-        protected override void OnBeforeDestroy()
-        {
-            if (mEventSystem.IsValueCreated)
-            {
-                mEventSystem.Value.UnRegisterAll();
-            }
-        }
     }
 }

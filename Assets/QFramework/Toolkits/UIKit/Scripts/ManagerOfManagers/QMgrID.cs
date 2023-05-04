@@ -35,6 +35,9 @@ namespace QFramework
         public const int Game = UIFilter + QMsgSpan.Count;
         public const int PCConnectMobile = Game + QMsgSpan.Count;
         public const int FrameworkEnded = PCConnectMobile + QMsgSpan.Count;
+        public const int Scenes = FrameworkEnded + QMsgSpan.Count;
+        public const int Input = Scenes + QMsgSpan.Count;
+
         public const int FrameworkMsgModuleCount = 7;
     }
 }

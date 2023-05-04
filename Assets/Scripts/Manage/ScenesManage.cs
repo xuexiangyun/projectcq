@@ -4,8 +4,9 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceProviders;
+using GameUI;
 
-public class ScenesManage : MonoBehaviour,IManage
+public class ScenesManage : QMgrBehaviour
 {
     private GameSceneSO _loadToScene;
     private GameSceneSO _curScnene;
@@ -15,9 +16,10 @@ public class ScenesManage : MonoBehaviour,IManage
 
     public GameSceneSO CurScene => _curScnene;
 
+    public override int ManagerId => QMgrID.Scenes;
 
     private bool _isLoading = false;
-    public static float _fadeDuration = .5f;
+
 
     private void Awake()
     {
@@ -42,8 +44,8 @@ public class ScenesManage : MonoBehaviour,IManage
         if (_backFadePage)
         {
             EnumEventSystem.Global.Send(GamePlayEvnetEnum.SceneFade, FadeStyle.FadeOut);
+            yield return new WaitForSeconds(FadeCanvas.fadeTime);
         }
-        yield return new WaitForSeconds(_fadeDuration);
         if (_curScnene != null && _curScnene.sceneReference.OperationHandle.IsValid()){
             _curScnene.sceneReference.UnLoadScene();
             _curScnene = null;
@@ -77,14 +79,15 @@ public class ScenesManage : MonoBehaviour,IManage
         {
             EnumEventSystem.Global.Send(GamePlayEvnetEnum.SceneFade, FadeStyle.FadeOut);
         }
+        EnumEventSystem.Global.Send(GamePlayEvnetEnum.SceneLoaded, CurScene);
     }
 
-    public void Initialization()
+    public override void Init()
     {
         EnumEventSystem.Global.Register(GamePlayEvnetEnum.SceneLoad, LoadScene);
     }
 
-    private void OnDestroy()
+    protected override void OnBeforeDestroy()
     {
         EnumEventSystem.Global.UnRegister(GamePlayEvnetEnum.SceneLoad, LoadScene);
     }

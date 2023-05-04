@@ -24,7 +24,7 @@ public class Initialization :MonoBehaviour
 
     private void LoadMainMenu(AsyncOperationHandle<SceneInstance> obj)
     {
-        EnumEventSystem.Global.Send(GamePlayEvnetEnum.SceneLoad, new SceneArgs(mainScene));
+        EnumEventSystem.Global.Send(GamePlayEvnetEnum.SceneLoad, new SceneArgs(mainScene,false,true));
         SceneManager.UnloadSceneAsync(0);
     }
 }

@@ -6,12 +6,14 @@
 - [X] URP渲染管线
 - [x] Addressable
 - [X] Input System
+- [X] DOTween
 - [ ] Post-processing
 - [ ] localization
 - [X] 表驱动
 - [X] 保存系统
 - [ ] 多端运行
 - [ ] FMOD Audio
+- [ ] Log4net
 * * *
 **优化计划**
 
@@ -22,3 +24,12 @@
   
   
   [ExcelToScriptableobject](https://github.com/greatclock/excel_to_scriptableobject)
+
+
+  [Dotween](http://dotween.demigiant.com/) 
+
+
+  [Fmod](https://www.fmod.com/unity) 
+
+
+

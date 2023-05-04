@@ -7,17 +7,15 @@ using UnityEngine.InputSystem;
 using static GameInput;
 using static UnityEngine.InputSystem.InputAction;
 
-public class InputMange : MonoBehaviour, IManage, IGamePlayActions, IUIActions
+public class InputMange : QMgrBehaviour, IGamePlayActions, IUIActions
 {
     private GameInput gameInput;
-    public void Initialization()
-    {
-        
-    }
+
+    public override int ManagerId => QMgrID.Input;
 
     private void Awake()
     {
-        //GameApp.Instance.RegisterManage(this);
+        GameApp.Instance.RegisterManage(this);
     }
 
     private void OnEnable()

@@ -9,7 +9,7 @@ public class MainCameraAct : MonoBehaviour
 {
     private Camera _camera;
     //
-    private void OnEnable()
+    private void Awake()
     {
         _camera = GetComponent<Camera>();
         var _cameraData = _camera.GetUniversalAdditionalCameraData();
@@ -18,7 +18,7 @@ public class MainCameraAct : MonoBehaviour
             _cameraData.cameraStack.Add(_uiCamera);
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
         var _cameraData = _camera.GetUniversalAdditionalCameraData();
         var _cameracount = _cameraData.cameraStack.Count;
