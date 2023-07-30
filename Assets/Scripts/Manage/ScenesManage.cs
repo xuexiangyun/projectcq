@@ -6,7 +6,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.ResourceManagement.ResourceProviders;
 using GameUI;
 
-public class ScenesManage : QMgrBehaviour
+public class ScenesManage : QMgrBehaviour, ISingleton
 {
     private GameSceneSO _loadToScene;
     private GameSceneSO _curScnene;
@@ -90,5 +90,15 @@ public class ScenesManage : QMgrBehaviour
     protected override void OnBeforeDestroy()
     {
         EnumEventSystem.Global.UnRegister(GamePlayEvnetEnum.SceneLoad, LoadScene);
+    }
+
+    public void OnSingletonInit()
+    {
+
+    }
+
+    public static ScenesManage Instance
+    {
+        get { return MonoSingletonProperty<ScenesManage>.Instance; }
     }
 }

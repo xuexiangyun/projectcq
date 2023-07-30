@@ -15,7 +15,7 @@ MonoBehaviour:
   m_GroupName: Built In Data
   m_Data:
     m_SerializedData: []
-  m_GUID: e183361600d81bb4da64f35cf6ec15bf
+  m_GUID: 6800cdc83d2e0c944a710cf1a7322082
   m_SerializeEntries:
   - m_GUID: Resources
     m_Address: Resources
@@ -26,7 +26,7 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
   m_ReadOnly: 1
-  m_Settings: {fileID: 11400000, guid: 9242f91edefe7264aa34b16360600de8, type: 2}
+  m_Settings: {fileID: 11400000, guid: 74614fbdf8dd2bc4990c092380e221ee, type: 2}
   m_SchemaSet:
     m_Schemas:
     - {fileID: 11400000, guid: 176fabc254faf7d47ad7e31ae12b885c, type: 2}

@@ -149,7 +149,6 @@ namespace QFramework
             AsyncOperationHandle<GameObject> handle1;
             public void LoadPanelPrefabAsync(PanelSearchKeys panelSearchKeys, Action<AsyncOperationHandle<GameObject>> onPanelPrefabLoad)
             {
-
                 AsyncOperationHandle<GameObject> handle1 = Addressables.LoadAssetAsync<GameObject>(panelSearchKeys.GameObjName);
                 handle1.Completed += onPanelPrefabLoad;
             }

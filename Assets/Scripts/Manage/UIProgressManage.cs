@@ -27,7 +27,7 @@ public class UIProgressManage : QMgrBehaviour
         GameSceneSO sceneSO = (GameSceneSO)obj[0];
         if(sceneSO.scenesType == ScenesType.Menu)
         {
-            UIKit.CloseAllPanel();
+            //UIKit.CloseAllPanel();
             StartCoroutine(UIKit.OpenPanelAsync<MainPanel>());
         }
     }
